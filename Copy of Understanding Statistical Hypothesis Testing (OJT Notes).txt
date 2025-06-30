@@ -1,0 +1,576 @@
+﻿Understanding Statistical Hypothesis Testing (OJT Notes)
+What Is Hypothesis Testing?
+Hypothesis testing is a method used in statistics to compare two competing ideas about a population. These ideas are typically called hypotheses. The goal is to use data from a sample to determine which of the two statements is more likely to be true.
+A statistical hypothesis test is a method of statistical inference used to decide whether the data provide sufficient evidence to reject a particular hypothesis. A statistical hypothesis test typically involves a calculation of a test statistic. Then a decision is made, either by comparing the test statistic to a critical value or equivalently by evaluating a p-value computed from the test statistic
+
+
+Let’s say a company claims that its website gets an average of 50 visitors per day. To test this claim, we would collect historical data on website traffic, analyze it, and then see if the evidence supports the company’s statement or suggests otherwise.
+Formulating Hypotheses
+Null Hypothesis (H₀)
+The null hypothesis is our starting point. It assumes that there is no change, no effect, or no difference between groups. It's the default assumption that we aim to challenge.
+Example: If a company claims that it produces 50 units per day on average, then the null hypothesis would be:
+H₀: The mean daily production (μ) = 50
+
+
+Alternative Hypothesis (H₁)
+The alternative hypothesis represents what we suspect might be true instead. It suggests that there is a change or difference.
+Example: If we believe the company’s production is not exactly 50 units, then the alternative hypothesis would be:
+H₁: The mean daily production (μ) ≠ 50
+Key Concepts in Hypothesis Testing
+Level of Significance (α)
+This is the threshold we use to decide whether to reject the null hypothesis. A common value is 5% (α = 0.05).
+
+
+P-Value
+A p-value, or probability value, is a number describing the likelihood of obtaining the observed data under the null hypothesis of a statistical test.
+
+
+The p-value serves as an alternative to rejection points to provide the smallest level of significance at which the null hypothesis would be rejected. A smaller p-value means stronger evidence in favor of the alternative hypothesis.
+
+
+The p-value tells us how likely our sample results are, assuming the null hypothesis is true. The smaller the p-value, the stronger the evidence against H₀.
+If p-value < α, we reject the null hypothesis.
+If p-value ≥ α, we don’t reject the null hypothesis.
+* A p-value is a statistical measurement used to validate a hypothesis against observed data.
+* A p-value measures the probability of obtaining the observed results, assuming that the null hypothesis is true.
+* The lower the p-value, the greater the statistical significance of the observed difference.
+* A p-value of 0.05 or lower is generally considered statistically significant.
+* P-value can serve as an alternative to—or in addition to—preselected confidence levels for hypothesis testing.
+
+
+Test Statistic
+Test statistic is a quantity derived from the sample for statistical hypothesis testing.[1] A hypothesis test is typically specified in terms of a test statistic, considered as a numerical summary of a data-set that reduces the data to one value that can be used to perform the hypothesis test. In general, a test statistic is selected or defined in such a way as to quantify, within observed data, behaviours that would distinguish the null from the alternative hypothesis, where such an alternative is prescribed, or that would characterize the null hypothesis if there is no explicitly stated alternative hypothesis.
+
+
+An important property of a test statistic is that its sampling distribution under the null hypothesis must be calculable, either exactly or approximately, which allows p-values to be calculated. A test statistic shares some of the same qualities of a descriptive statistic, and many statistics can be used as both test statistics and descriptive statistics. However, a test statistic is specifically intended for use in statistical testing, whereas the main quality of a descriptive statistic is that it is easily interpretable. Some informative descriptive statistics, such as the sample range, do not make good test statistics since it is difficult to determine their sampling distribution.
+
+
+It is a number calculated from sample data used to determine if results are statistically significant.
+
+
+Example of test statistic
+Suppose the task is to test whether a coin is fair (i.e. has equal probabilities of producing a head or a tail). If the coin is flipped 100 times and the results are recorded, the raw data can be represented as a sequence of 100 heads and tails. If there is interest in the marginal probability of obtaining a tail, only the number T out of the 100 flips that produced a tail needs to be recorded. But T can also be used as a test statistic in one of two ways:
+
+
+1. The exact sampling distribution of T under the null hypothesis is the binomial distribution with parameters 0.5 and 100.
+2. the value of T can be compared with its expected value under the null hypothesis of 50, and since the sample size is large, a normal distribution can be used as an approximation to the sampling distribution either for T or for the revised test statistic T−50.
+Using one of these sampling distributions, it is possible to compute either a one-tailed or two-tailed p-value for the null hypothesis that the coin is fair. The test statistic in this case reduces a set of 100 numbers to a single numerical summary that can be used for testing.
+
+
+
+
+
+
+Critical Value
+Critical values of a statistical test are the boundaries of the acceptance region of the test.[42] The acceptance region is the set of values of the test statistic for which the null hypothesis is not rejected. Depending on the shape of the acceptance region, there can be one or more than one critical value.
+
+
+Region of rejection / Critical region: The set of values of the test statistic for which the null hypothesis is rejected.
+
+
+
+
+
+
+Degrees of Freedom
+In statistics, the number of degrees of freedom is the number of values in the final calculation of a statistic that are free to vary.[1]
+
+
+Estimates of statistical parameters can be based upon different amounts of information or data. The number of independent pieces of information that go into the estimate of a parameter is called the degrees of freedom. In general, the degrees of freedom of an estimate of a parameter are equal to the number of independent scores that go into the estimate minus the number of parameters used as intermediate steps in the estimation of the parameter itself. For example, if the variance is to be estimated from a random sample of N independent scores, then the degrees of freedom is equal to the number of independent scores (N) minus the number of parameters estimated as intermediate steps (one, namely, the sample mean) and is therefore equal to N-1
+
+
+In short, degrees of freedom refers to how many values in a statistical calculation are free to vary.
+
+
+Types of Hypothesis Tests - One-Tailed Tests
+Used when we are only interested in detecting a change in one direction.
+
+
+Left-Tailed Test
+Used when the true mean is suspected to be less than a certain value:
+H₀: μ ≥ 50
+H₁: μ < 50
+
+
+Right-Tailed Test
+Used when the true mean is suspected to be greater than a certain value:
+H₀: μ ≤ 50
+H₁: μ > 50
+
+
+Types of Hypothesis Tests - Two-Tailed Tests
+Used when we want to detect any significant difference regardless of direction.
+
+
+Example:
+H₀: μ = 50
+H₁: μ ≠ 50
+
+
+Two-tailed tests split the significance level across both ends of the distribution and are useful when we have no specific directional hypothesis.
+Wrapping Up
+Hypothesis testing gives us a structured way to make decisions using data. By understanding the roles of H₀ and H₁, p-values, significance levels, and test types, we can interpret evidence accurately and make informed conclusions.
+
+
+TYPE I and TYPE II ERROR
+
+
+Type 1 error:  When we reject the null hypothesis although that hypothesis was true. Type I error is denoted by alpha(α). This kind of error is called a type I error (false positive) and is sometimes called an error of the first kind.
+
+
+Type 2 errors:  When we accept the null hypothesis but it is false. Type II errors are denoted by beta(β). This sort of error is called a type II error (false negative) and is also referred to as an error of the second kind.
+
+
+Now, in order to check out how hypothesis testing works, we have to take care of the following steps:
+
+
+Step 1 : Define null and alternative hypothesis
+
+
+Step 2 : Choose a level of significance. This is the maximum chance we accept wrongly rejecting null hypothesis or Type I error
+
+
+Step 3 :We then proceed to collect our required data. Once collected we analyze the data using appropriate statistical methods to calculate the test statistic
+
+
+Step 4 : The test statistic measures how much the sample data deviates from what we did expect if the null hypothesis were true. Different tests use different statistics like:
+
+
+Z-test: Used when population variance is known and sample size is large.
+T-test: Used when sample size is small or population variance unknown.
+Chi-square test: Used for categorical data to compare observed vs. expected counts
+
+
+Step 5 : We compare the test statistics to critical values in order to make our final decision
+
+
+If test statistics value is greater than critical value, we reject the null hypothesis
+
+
+If test statistics value is less than critical value, we accept the null hypothesis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Comparison tests determine the differences among the group means. They can be used to test the effect of a categorical variable on the mean value of other characteristics.
+
+
+1.T-test
+One of the most common statistical tests is the t-test, which is used to compare the means of two groups (e.g. the average heights of men and women). You can use the t-test when you are not aware of the population parameters (mean and standard deviation).
+
+
+2.Paired T-test
+It tests the difference between two variables from the same population (pre-and post-test scores). For example, measuring the performance score of the trainee before and after the completion of the training program.
+
+
+3.Independent T-test
+The independent t-test is also called the two-sample t-test. It is a statistical test that determines whether there is a statistically significant difference between the means in two unrelated groups. For example, comparing cancer patients and pregnant women in a population.
+
+
+4.One Sample T-test
+In this test, the mean of a single group is compared with the given mean. For example, determining the increase and decrease in sales in the given average sales.
+
+
+5.ANOVA
+ANOVA (Analysis of Variance) analyzes the difference between the means of more than two groups. One-way ANOVAs determine how one factor impacts another, whereas two-way analyses compare samples with different variables. It determines the impact of one or more factors by comparing the means of different samples.
+
+
+6.MANOVA
+MANOVA, which stands for Multivariate Analysis of Variance, provides regression analysis and analysis of variance for multiple dependent variables by one or more factor variables or covariates. Also, it examines the statistical difference between one continuous dependent variable and an independent grouping variable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. One-Sample t-test
+Purpose: Compares the mean of a single sample to a known population mean.
+Use Case: When you want to determine if a sample comes from a population with a specific mean (e.g., testing if average student GPA is significantly different from 3.0).
+Type of Variables: Numerical (continuous)
+Number of Groups/Variables Compared: 1 group
+Assumptions:
+- Normality (or large sample size)
+- Random sampling
+- Unknown population standard deviation
+Tail Directionality: Two-tailed (default), but can be one-tailed
+Test Statistic: 
+t = (x̄ - μ₀) / (s / √n)
+Example Scenario: A teacher wants to know if the average score of her class on a standardized math test (mean = 78) differs significantly from the national average (μ₀ = 75).
+
+
+2. Two-Sample t-test (Independent Samples)
+Purpose: Compares means of two independent groups.
+Use Case: Testing whether two independent populations have equal means (e.g., comparing test scores between students using two different teaching methods).
+Type of Variables: Numerical dependent variable, categorical grouping variable
+Number of Groups/Variables Compared: 2 independent groups
+Assumptions:
+- Independence of observations
+- Normality of both groups
+- Equal variances (can be tested via Levene’s or F-test)
+Tail Directionality: Two-tailed (default), but can be one-tailed
+Test Statistic: 
+t = (x̄₁ - x̄₂) / √[(s²/n₁) + (s²/n₂)]
+Example Scenario: Comparing the average income of employees in two departments (Sales vs. Marketing).
+
+
+3. Paired t-test
+Purpose: Compares means of two related groups (before & after, matched pairs).
+Use Case: Measuring change within the same subjects over time or under two conditions.
+Type of Variables: Numerical paired data
+Number of Groups/Variables Compared: 2 related groups
+Assumptions:
+- Differences between pairs are normally distributed
+- Pairs are independent of each other
+Tail Directionality: Two-tailed (default), but can be one-tailed
+Test Statistic: 
+t = d̄ / (s_d / √n)
+where d̄ is the mean difference and s_d is the standard deviation of differences.
+Example Scenario: Comparing blood pressure readings before and after administering a drug to the same patients.
+
+
+4. Z-test
+Purpose: Similar to a t-test, but used when population variance is known or sample size is large.
+Use Case: When dealing with proportions or large samples (n > 30), and σ is known.
+Type of Variables: Numerical (one or two samples)
+Number of Groups/Variables Compared: 1 or 2 groups
+Assumptions:
+- Large sample size (n ≥ 30)
+- Known population standard deviation
+Tail Directionality: Two-tailed (default), but can be one-tailed
+Test Statistic (One-sample): 
+z = (x̄ - μ₀) / (σ / √n)
+Example Scenario: Checking if the average height of a sample of 100 adults (67 inches) differs from the known population average (66 inches), assuming σ = 3.
+
+
+5. One-Way ANOVA
+Purpose: Compares means across three or more independent groups.
+Use Case: Testing if at least one group has a different mean than others (e.g., comparing effectiveness of 3 drugs).
+Type of Variables: Numerical response variable, categorical factor
+Number of Groups/Variables Compared: 3+ independent groups
+Assumptions:
+- Independence of observations
+- Homogeneity of variances (Levene's test)
+- Normality of residuals
+Tail Directionality: Always two-tailed
+Test Statistic: 
+F = MS_between / MS_within
+Example Scenario: Comparing the average number of hours studied per week by students in three different majors (Math, English, Biology).
+
+
+6. Repeated Measures ANOVA
+Purpose: Like One-Way ANOVA, but for related (repeated) measures.
+Use Case: Analyzing changes in a variable measured repeatedly on the same subjects (e.g., pre/post treatment measurements across time).
+Type of Variables: Numerical response, repeated measurements
+Number of Groups/Variables Compared: 3+ repeated measurements on the same subjects
+Assumptions:
+- Sphericity (can be checked via Mauchly's test)
+- Normality of differences
+Tail Directionality: Always two-tailed
+Test Statistic: Same as ANOVA but accounts for within-subject variability.
+Example Scenario: Measuring participants' anxiety levels at baseline, 1 week, and 1 month after therapy.
+
+
+7. One-Proportion Z-test
+Purpose: Tests if a sample proportion differs from a hypothesized value.
+Use Case: Testing if the proportion of defective items in a batch is greater than 5%.
+Type of Variables: Binary categorical (success/failure)
+Number of Groups/Variables Compared: 1 group
+Assumptions:
+- np₀ ≥ 10 and n(1-p₀) ≥ 10
+Tail Directionality: Can be one-tailed or two-tailed
+Test Statistic: 
+z = (p̂ - p₀) / √[p₀(1 - p₀)/n]
+Example Scenario: Testing if 60% of surveyed customers prefer Product A over B, against a null hypothesis of 50%.
+
+
+8. Two-Proportion Z-test
+Purpose: Compares proportions between two independent groups.
+Use Case: Comparing conversion rates between two ad campaigns.
+Type of Variables: Binary categorical (two groups)
+Number of Groups/Variables Compared: 2 independent groups
+Assumptions:
+- Independent samples
+- Each group satisfies normal approximation (np ≥ 10, n(1-p) ≥ 10)
+Tail Directionality: Two-tailed (default), but can be one-tailed
+Test Statistic: 
+z = (p̂₁ - p̂₂) / √[p̂(1 - p̂)(1/n₁ + 1/n₂)]
+where p̂ = (x₁ + x₂) / (n₁ + n₂)
+Example Scenario: Comparing pass rates of male and female students on a certification exam.
+
+
+9. Chi-Square Test of Independence
+Purpose: Determines if there is a significant association between two categorical variables.
+Use Case: Is there a relationship between gender and voting preference?
+Type of Variables: Two categorical variables
+Number of Groups/Variables Compared: 2 or more categories in each variable
+Assumptions:
+- Observations are independent
+- Expected frequency in each cell ≥ 5
+Tail Directionality: Always two-tailed
+Test Statistic: 
+χ² = Σ [(O - E)² / E]
+Example Scenario: Testing if there is an association between smoking status and lung disease incidence.
+
+
+10. Chi-Square Goodness-of-Fit Test
+Purpose: Checks if observed frequencies match expected frequencies.
+Use Case: Are the numbers of red, blue, green candies in a bag evenly distributed?
+Type of Variables: One categorical variable
+Number of Groups/Variables Compared: 1 variable with multiple categories
+Assumptions:
+- Independent observations
+- Expected frequency in each category ≥ 5
+Tail Directionality: Always two-tailed
+Test Statistic: 
+χ² = Σ [(O - E)² / E]
+Example Scenario: Testing if the distribution of blood types in a sample matches the expected distribution.
+
+
+11. Fisher’s Exact Test
+Purpose: Alternative to chi-square for small sample sizes (especially 2x2 tables).
+Use Case: Used in clinical trials with small sample sizes.
+Type of Variables: Two binary categorical variables
+Number of Groups/Variables Compared: 2x2 table
+Assumptions:
+- Fixed marginal totals
+- Small sample size (< 20)
+Tail Directionality: Two-tailed (default), but can be one-tailed
+Test Statistic: Uses hypergeometric distribution
+Example Scenario: Comparing side effects between two medications with only 10 patients.
+
+
+12. Mann–Whitney U Test
+Purpose: Non-parametric alternative to the independent t-test.
+Use Case: Comparing medians of two independent groups without assuming normality.
+Type of Variables: Ordinal or numerical
+Number of Groups/Variables Compared: 2 independent groups
+Assumptions:
+- Independent samples
+- Continuous or ordinal outcome
+Tail Directionality: Two-tailed (default), but can be one-tailed
+Test Statistic: U statistic based on ranks
+Example Scenario: Comparing customer satisfaction ratings between two products.
+
+
+13. Wilcoxon Signed-Rank Test
+Purpose: Non-parametric alternative to the paired t-test.
+Use Case: Comparing median differences in paired or matched samples.
+Type of Variables: Ordinal or numerical paired data
+Number of Groups/Variables Compared: 2 related groups
+Assumptions:
+- Symmetry around the median
+- Dependent pairs
+Tail Directionality: Two-tailed (default), but can be one-tailed
+Test Statistic: W statistic based on signed ranks
+Example Scenario: Pre- and post-intervention survey scores.
+
+
+14. Kruskal–Wallis Test
+Purpose: Non-parametric alternative to One-Way ANOVA.
+Use Case: Comparing medians across 3+ independent groups.
+Type of Variables: Ordinal or numerical
+Number of Groups/Variables Compared: 3+ independent groups
+Assumptions:
+- Independent samples
+- Same shape distributions across groups
+Tail Directionality: Always two-tailed
+Test Statistic: H statistic based on ranks
+Example Scenario: Comparing median salaries across four job roles.
+
+
+15. Friedman Test
+Purpose: Non-parametric alternative to Repeated Measures ANOVA.
+Use Case: Comparing 3+ related groups (e.g., repeated measurements).
+Type of Variables: Ordinal or numerical
+Number of Groups/Variables Compared: 3+ related groups
+Assumptions:
+- Related observations
+- No interaction effects
+Tail Directionality: Always two-tailed
+Test Statistic: Fr statistic based on ranks
+Example Scenario: Evaluating participant performance across 3 rounds of a game.
+
+
+16. Pearson Correlation Coefficient Test
+Purpose: Measures linear correlation between two continuous variables.
+Use Case: How strongly does age correlate with income?
+Type of Variables: Two numerical variables
+Number of Groups/Variables Compared: 2 variables
+Assumptions:
+- Linearity
+- Normality
+- Homoscedasticity
+Tail Directionality: Two-tailed (default), but can be one-tailed
+Test Statistic: 
+r = Σ(xᵢ - x̄)(yᵢ - ȳ) / √[Σ(xᵢ - x̄)² Σ(yᵢ - ȳ)²]
+Example Scenario: Investigating the relationship between hours spent studying and final exam scores.
+
+
+17. Spearman Rank Correlation Test
+Purpose: Non-parametric measure of monotonic association between two ranked variables.
+Use Case: When variables are not normally distributed or relationship is non-linear.
+Type of Variables: Ordinal or numerical
+Number of Groups/Variables Compared: 2 variables
+Assumptions:
+- Monotonic relationship
+Tail Directionality: Two-tailed (default), but can be one-tailed
+Test Statistic: 
+ρ = 1 - [6Σd_i² / n(n² - 1)]
+Example Scenario: Assessing the relationship between employee rank and years of experience.
+
+
+18. Simple Linear Regression
+Purpose: Models the linear relationship between one independent and one dependent variable.
+Use Case: Predicting salary based on years of experience.
+Type of Variables: Numerical predictor and response
+Assumptions:
+- Linearity
+- Independence
+- Homoscedasticity
+- Normality of residuals
+Tail Directionality: Two-tailed for coefficients
+Test Statistic: T-tests on regression coefficients
+Example Scenario: Modeling house price as a function of square footage.
+
+
+19. Multiple Linear Regression
+Purpose: Extends simple regression to include multiple predictors.
+Use Case: Predicting college GPA using SAT score, high school GPA, and extracurricular involvement.
+Type of Variables: Multiple numerical or dummy predictors, one numerical outcome
+Assumptions:
+- Multicollinearity not severe
+- All linear regression assumptions
+Tail Directionality: Two-tailed for individual coefficients
+Test Statistic: F-test for overall model significance, t-tests for individual predictors
+Example Scenario: Predicting patient recovery time using age, weight, and medication dosage.
+
+
+20. Logistic Regression
+Purpose: Models the probability of a binary outcome based on one or more predictors.
+Use Case: Predicting whether a customer will churn based on usage patterns.
+Type of Variables: Binary outcome, numerical or categorical predictors
+Assumptions:
+- Linearity in log odds
+- Independence of observations
+Tail Directionality: Two-tailed for coefficients
+Test Statistic: Wald test, Likelihood Ratio Test
+Example Scenario: Predicting loan default risk based on credit history.
+
+
+21. F-test (in Regression)
+Purpose: Tests whether a regression model explains a significant amount of variance.
+Use Case: Determining if adding new variables improves the model.
+Type of Variables: Any regression model output
+Assumptions:
+- Normally distributed errors
+Tail Directionality: Always two-tailed
+Test Statistic: 
+F = (R² / k) / ((1 - R²) / (n - k - 1))
+Example Scenario: Checking if a full regression model is better than an intercept-only model.
+
+
+22. Levene’s Test
+Purpose: Tests equality of variances across groups.
+Use Case: Before running ANOVA, check if assumption of homogeneity of variance holds.
+Type of Variables: Numerical variable grouped by a categorical variable
+Number of Groups/Variables Compared: 2+ groups
+Assumptions:
+- Robust to non-normality
+Tail Directionality: Always two-tailed
+Test Statistic: Based on absolute deviations from group means
+Example Scenario: Checking if variance in income is similar across three professions.
+
+
+23. F-test for Equality of Variances
+Purpose: Compares variances of two independent groups.
+Use Case: Testing if two machines produce parts with the same variability.
+Type of Variables: Two numerical samples
+Number of Groups/Variables Compared: 2 groups
+Assumptions:
+- Normality
+Tail Directionality: Two-tailed (default), but can be one-tailed
+Test Statistic: 
+F = s₁² / s₂²
+Example Scenario: Comparing variance in test scores between two classes.
